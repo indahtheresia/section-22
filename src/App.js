@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home";
 import ProductPage from "./pages/Products";
 import RootLayout from "./pages/Root";
+import ErrorPage from "./pages/Error";
 
 function App() {
   // const routeDefinitions = createRoutesFromElements(
@@ -16,7 +17,9 @@ function App() {
   const router = createBrowserRouter([
     { 
       path: '/', 
-      element: <RootLayout />, children: [
+      element: <RootLayout />, 
+      errorElement: <ErrorPage />,
+      children: [
         { path: '/', element: <HomePage /> },
         { path: '/products', element: <ProductPage />},
       ],

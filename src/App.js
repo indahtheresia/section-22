@@ -3,6 +3,7 @@ import HomePage from "./pages/Home";
 import ProductPage from "./pages/Products";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
+import ProductDetailPage from "./pages/ProductDetail";
 
 function App() {
   // const routeDefinitions = createRoutesFromElements(
@@ -22,6 +23,7 @@ function App() {
       children: [
         { path: '/', element: <HomePage /> },
         { path: '/products', element: <ProductPage />},
+        { path: '/products/:productId', element: <ProductDetailPage />},
       ],
     },
   ]);
